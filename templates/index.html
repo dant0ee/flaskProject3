@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Student Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .student-info {
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .student-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Information</h1>
+    {% for student in students %}
+    <div class="student-info">
+        <p><strong>ID:</strong> {{ student['id'] }}</p>
+        <p><strong>Name:</strong> {{ student['name'] }}</p>
+        <p><strong>GPA:</strong> {{ student['gpa'] }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
